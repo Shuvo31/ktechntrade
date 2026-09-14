@@ -43,22 +43,6 @@ Just open `index.html` in any browser — no build step needed.
 
 ## Contact Form
 
-The form currently shows a success animation client-side only.  
-To make it actually send emails, replace the `setTimeout` in the submit handler with a `fetch` call to one of:
+The contact form submits to [Formspree](https://formspree.io) via `fetch` (see the submit handler at the bottom of `index.html`). Submissions are sent to the endpoint configured there and show up in the Formspree dashboard.
 
-- **[Formspree](https://formspree.io)** — free tier, no backend needed  
-- **[Web3Forms](https://web3forms.com)** — free, no backend  
-- Your own FastAPI/Node.js backend endpoint
-
-```js
-// Example with Formspree:
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const res = await fetch('https://formspree.io/f/YOUR_ID', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { Accept: 'application/json' }
-  });
-  if (res.ok) { /* show success */ }
-});
-```
+To point the form at a different Formspree form, update the `action` attribute on `#contact-form` and the `fetch` URL in the submit handler.
