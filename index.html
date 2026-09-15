@@ -735,6 +735,9 @@
         border-top: 1px solid rgba(27,150,180,0.18);
       }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .pillars { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: repeat(2,1fr); }
+      .form-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -743,12 +746,9 @@
       .services-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
       .tab-panel.active { grid-template-columns: 1fr; gap: 3rem; }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .pillars { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: repeat(2,1fr); }
       .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .values-grid { grid-template-columns: 1fr; }
